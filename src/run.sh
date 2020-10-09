@@ -3,4 +3,4 @@
 python manage.py collectstatic --noinput
 python manage.py makemigrations
 python manage.py migrate
-gunicorn src.wsgi --bind=0.0.0.0:80
+gunicorn projet_3_bridge.wsgi --bind=0.0.0.0:80
