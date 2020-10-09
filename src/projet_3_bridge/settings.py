@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = " "
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -70,15 +69,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "projet_3_bridge.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 
 # Password validation
@@ -118,3 +108,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+if os.environ.get("PRODUCTION") is None:
+    from .settings_dev import *
+else:
+    from .settings_caprover import *
