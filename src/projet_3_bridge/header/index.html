@@ -11,17 +11,29 @@
 </head>
 
 <body>
-    <div class='menu-container'>
-        <div class='menu'>
-            <div class='logo'><img src="logo.jpg" alt="Logo bridge olivetain"></div>
-            <div class='accueil'>accueil</div>
-            <div class='agenda'>agenda</div>
-            <div class='club'>club</div>
-            <div class='contact'>contact</div>
-            <div class="connexion">
-               <!--- <div class='login'>Login</div>-->
+    <nav class="navbar navbar-expand-md navbar fixed-top">
+        <a class='logo'><img src="logo.jpg" alt="Logo bridge olivetain"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Club</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <div class="connexion">Connexion</div>
+            </ul>
             </div>
-        </div>
+        </nav>        
     </div>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -51,7 +63,38 @@
             <span class="sr-only">Next</span>
             </a>
         </div>
+        <span><h2>Bienvenue sur le site du GABO, le Groupement Amical des Bridgeurs Olivetains</h2></span>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                <div class="card-block">
+                    <img class="event" src="bridge3.jpg" alt="text" width="150" height="150">
+                    <div class="card-body text-center">
+                    <p class="card-text">Some text inside the first card</p>
+                </div>
+                <div class="card-block">
+                    <img class="event" src="bridge3.jpg" alt="text" width="150" height="150">
+                    <div class="card-body text-center">
+                    <p class="card-text">Some text inside the first card</p>
+                </div>
+                <div class="card-block">
+                    <img class="event" src="bridge3.jpg" alt="text" width="150" height="150">
+                    <div class="card-body text-center">
+                    <p class="card-text">Some text inside the first card</p>
+                </div>
+            </div>
+    </div>
+    <footer id= "sticky-footer" class="page-footer">
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                <a class="nav-link" href="#">Accueil</a></p>
+                <a class="nav-link" href="#">Agenda</a></p>
+                <a class="nav-link" href="#">Club</a></p>
+                <a class="nav-link" href="#">Contact</a></p>
+        </div>
+    </footer>
+
     <script src="scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
